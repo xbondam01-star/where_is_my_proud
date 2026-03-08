@@ -1,0 +1,128 @@
+/* Component CSS for BeerCard */
+
+.beer-card {
+    position: relative;
+    background-color: var(--bg-card);
+    border-radius: var(--card-border-radius);
+    padding: 24px;
+    overflow: hidden;
+    box-shadow: var(--glow-card);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.beer-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(255, 193, 7, 0.1);
+}
+
+/* Background Ghost Icon Overlay */
+.ghost-icon {
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%) rotate(15deg);
+    color: rgba(255, 193, 7, 0.08);
+    /* Faint yellow tint */
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Ensure content stays above the ghost icon */
+.card-header,
+.product-title,
+.price-container,
+.card-footer {
+    position: relative;
+    z-index: 1;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.offer-type {
+    color: var(--color-primary);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.badge {
+    background-color: var(--color-primary);
+    color: #1A1D24;
+    /* Dark text on yellow background */
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    box-shadow: var(--glow-primary);
+}
+
+.product-title {
+    color: var(--text-primary);
+    font-size: 28px;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.price-container {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.price-main {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.price-sub {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.card-footer {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: auto;
+}
+
+.location-pill {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.location-pill svg {
+    color: var(--color-primary);
+}
+
+.discount-perc {
+    color: var(--color-success);
+    font-size: 16px;
+    font-weight: 700;
+}

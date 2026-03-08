@@ -1,0 +1,9 @@
+requests
+pydantic
+beautifulsoup4
+pymongo
+fastapi
+uvicorn
+motor
+pydantic-settings
+apscheduler
